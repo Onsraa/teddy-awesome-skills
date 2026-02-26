@@ -1,25 +1,25 @@
-# English vs French: The Guide
+# Français vs Anglais : Le Guide
 
-When writing your own "Skills" (business instructions for AI agents like Claude, GPT-4, Cursor, etc.), the question of language frequently arises. Should they be written in our native language, or in English?
+Lors de la rédaction de vos propres "Skills" (instructions métiers pour agents d'IA, comme Claude, GPT-4, etc.), la question de la langue se pose fréquemment. Doit-on les rédiger dans notre langue maternelle, ou en anglais ?
 
-This repository offers a simple organizational method by providing **two distinct folders** for each design system.
+Ce dépôt offre une méthode simple en proposant **deux dossiers disctincts** pour chaque design system.
 
-## Why an EN (English) folder?
+## Pourquoi un dossier EN (Anglais) ?
 
-1. **The majority of LLMs' training data:** State-of-the-art models like GPT-4, Claude 3, or Gemini have been trained on over 80% English corpora. Their ability to understand nested rule lists, constraints, or programming syntax is considerably superior in this language.
-2. **Fewer "hallucinations":** Forcing complex technical syntax in French ("Ne jamais mettre de rayon de bordure aux composants" instead of "Never use border-radius: 0") can generate approximations when the agent literally transposes the concept into HTML/CSS code.
-3. **Community and standards:** English is the universal standard for software development.
+1. **La majorité des données des LLMs :** Les modèles de pointe comme GPT-4, Claude 3 ou Gemini ont été entraînés à plus de 80% sur des corpus anglophones. Leur capacité à comprendre des listes de règles imbriquées, des contraintes (constraints) ou de la syntaxe de programmation est considérablement supérieure dans cette langue.
+2. **Moins de "hallucinations"** : Forcer une syntaxe technique complexe en français ("Ne jamais mettre de rayon de bordure aux composants" plutôt que "Never use border-radius") peut générer des approximations si l'agent transpose littéralement le concept au moment de générer du code (HTML, CSS).
+3. **Communauté et standards :** L'anglais est le standard universel du développement logiciel.
 
-## Why an FR (French) folder?
+## Pourquoi un dossier FR (Français) ?
 
-If you are a French developer, it is more natural to interact, have code reviewed, and read reports in French. Original prompts are often conceived in French so they can be:
-- More inclusive for your colleagues or team (for reviewing guidelines).
-- Easily understood when your LLM needs to produce French marketing content specifically.
+Si vous êtes développeur français, il est plus naturel d'interagir, de faire revoir son code et de lire des rapports en français. Les prompts originaux ont souvent été pensés en français pour qu'ils soient :
+- Plus inclusifs pour vos collègues ou votre équipe (pour la relecture de guidelines).
+- Plus facilement clairs lorsque votre LLM doit produire du contenu marketing francophone.
 
-## Structure of this repository
+## Structure de ce dépôt
 
-To maxmize flexibility, every _Skill_ directory offers two implementations:
-- `/en/SKILL.md`: The design system 100% in English. Direct and incisive, designed for LLMs.
-- `/fr/SKILL.md`: The design system 100% in French. Easy to read for business, marketing, and the developers managing its maintenance.
+Afin d'offrir une flexibilité maximale, chaque dossier de _Skill_ propose deux implémentations :
+- `/fr/SKILL.md` : Le design system 100% en français. Facile à lire pour les métiers, le marketing et les développeurs qui gèrent la maintenance.
+- `/en/SKILL.md` : Le design system 100% en anglais. Direct et incisif, pensé pour les LLMs.
 
-We recommend prioritizing the **`/en/SKILL.md`** version inside your LLM prompt when asking it to generate flawless complex code. Of course, you are free to give an *explicit* supplementary instruction asking it to reply to you in French naturally!
+Il est recommandé de privilégier la version **`/en/SKILL.md`** à l'intérieur du prompt de votre LLM pour lui demander de générer du code complexe sans faille, et bien sûr libre à vous de donner une instruction supplémentaire *explicite* en lui demandant de vous répondre en français de façon naturelle !

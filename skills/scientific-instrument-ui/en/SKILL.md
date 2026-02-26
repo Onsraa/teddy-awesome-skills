@@ -1,19 +1,19 @@
 ---
-name: mapf-fis-ui-en
-description: Design system for MAPF-FIS (Multi-Agent Path Finding — Fault Injection Simulator). Use this when building any UI component, layout, or HTML/CSS interface for the MAPF-FIS project.
+name: scientific-instrument-ui
+description: Design system for 3D simulation and WebGL dashboards. Use this when building any UI component, layout, or HTML/CSS interface for a project centering around a 3D viewport or dense data visualization.
 license: Complete terms in LICENSE.txt
 ---
 
-# SKILL: MAPF-FIS UI Design System — "Scientific Instrument" Style
+# SKILL: Scientific Instrument UI Design System
 
-> Architecture target: Bevy WASM canvas (central 3D viewport) + peripheral HTML/CSS/JS via wasm-bindgen.
+> Architecture target: WebGL canvas (central 3D viewport) + peripheral HTML/CSS/JS.
 
 ---
 
 ## 1. VISUAL IDENTITY
 
 ### Philosophy
-**"Scientific Instrument"**: The aesthetic of high-precision measurement instruments. Sober, technical, confident. The Bevy 3D scene is the absolute center of the experience — the UI never competes with it, it serves it.
+**"Scientific Instrument"**: The aesthetic of high-precision measurement instruments. Sober, technical, confident. The 3D scene is the absolute center of the experience — the UI never competes with it, it serves it.
 
 **Golden Rule**: If the UI draws more attention than the simulation, it has failed.
 
@@ -25,9 +25,9 @@ license: Complete terms in LICENSE.txt
 ```
 ┌─────────────┬──────────────────────────────┬────────────┐
 │  #panel-left│                              │#panel-right│
-│  Pre-sim    │      #canvas-bevy            │  Real-time │
-│  Parameters │      (Bevy WASM viewport)    │  Metrics   │
-│  Config     │                              │  Agents    │
+│  Pre-sim    │      #canvas-webgl           │  Real-time │
+│  Parameters │      (WebGL Viewport)        │  Metrics   │
+│  Config     │                              │  Entities  │
 │  Scenario   │                              │  Stats     │
 └─────────────┴──────────────────────────────┴────────────┘
 │                   #toolbar-bottom                        │
@@ -35,14 +35,14 @@ license: Complete terms in LICENSE.txt
 └──────────────────────────────────────────────────────────┘
 ```
 
-The Bevy canvas occupies **70-75%** of the width. The panels are discreet tools.
+The WebGL canvas occupies **70-75%** of the width. The panels are discreet tools.
 
 ---
 
 ## 2. COLORS
 
 ### Fundamental Rule
-The background is **never pure white**. It is always slightly tinted cream/sand. UI panels have a cream background. The Bevy viewport has its own dark background managed internally.
+The background is **never pure white**. It is always slightly tinted cream/sand. UI panels have a cream background. The 3D viewport has its own dark background managed internally.
 
 ### Main Palette
 | Role | CSS Value | Usage |
@@ -62,14 +62,14 @@ The background is **never pure white**. It is always slightly tinted cream/sand.
 | Muted text | `rgb(160, 160, 160)` | Placeholders, captions |
 | Text on dark background| `rgb(244, 241, 237)` | Header bar |
 
-### State Palette (Agents & Simulation)
+### State Palette (Entities & Simulation)
 | State | CSS Value | Usage |
 |-------|-----------|-------|
-| IDLE | `rgb(160, 160, 160)` | Waiting agent |
-| MOVING | `rgb(45, 160, 0)` | Moving agent |
-| DELAYED | `rgb(230, 140, 0)` | Delayed agent (fault propagation) |
-| FAULT | `rgb(230, 44, 2)` | Agent failure |
-| CRITICAL | `rgb(143, 58, 222)` | Critical agent (heatmap) |
+| IDLE | `rgb(160, 160, 160)` | Waiting entity |
+| ACTIVE | `rgb(45, 160, 0)` | Moving/Active entity |
+| WARNING | `rgb(230, 140, 0)` | Delayed/Warning state |
+| ERROR | `rgb(230, 44, 2)` | Entity failure/Error |
+| CRITICAL | `rgb(143, 58, 222)` | Critical state (heatmap) |
 | SUCCESS | `rgb(45, 160, 0)` | Simulation completed successfully |
 
 > These state colors are the **only saturated colors** in the UI. They must pop immediately against the cream background.
@@ -114,7 +114,7 @@ The background is **never pure white**. It is always slightly tinted cream/sand.
 - **Right Panel**: `260px` fixed
 - **Bottom Toolbar**: `56px` fixed
 - **Header Bar**: `44px` fixed
-- **Bevy Canvas**: Remainder (`calc(100vw - 540px)`)
+- **WebGL Canvas**: Remainder (`calc(100vw - 540px)`)
 
 ### Internal Panel Spacing
 - **Panel padding**: `16px`
@@ -160,11 +160,11 @@ The background is **never pure white**. It is always slightly tinted cream/sand.
 
 ---
 
-## 6. BEVY ↔ HTML COMMUNICATION (wasm-bindgen)
+## 6. SIMULATION ↔ HTML COMMUNICATION
 
 ### Pattern
-Use `wasm-bindgen` to safely serialize data to JS via `serde_wasm_bindgen` or custom DOM events (`mapf-state-update`).
-Expose tick rate, agents array with states, fault_count, etc.
+Use standard event dispatching to communicate between the WebGL context (e.g. Three.js/WASM) and the UI (`simulation-state-update`).
+Expose tick rate, entities array with states, fault_count, etc.
 
 ---
 
@@ -174,8 +174,8 @@ Expose tick rate, agents array with states, fault_count, etc.
 2. **Never use pure white backgrounds** — always cream/sand (`rgb(246,244,240)`).
 3. **All numerical values MUST be DM Mono**.
 4. **UI Labels are always uppercase with positive letter-spacing**.
-5. **Saturated colors are ONLY for agent states** to immediately catch the eye.
-6. **No HTML overlays on the Bevy canvas** — panels are strictly lateral.
+5. **Saturated colors are ONLY for entity states** to immediately catch the eye.
+6. **No HTML overlays on the 3D canvas** — panels are strictly lateral.
 7. **No box-shadows** — subtle borders only.
 8. **No unnecessary animations** — allow only state change transitions (color changes, opacity).
 
@@ -188,6 +188,6 @@ Expose tick rate, agents array with states, fault_count, etc.
 | `border-radius: 8px` on buttons | Strict `border-radius: 0px` |
 | White background `#ffffff` | Cream background `rgb(246,244,240)` |
 | Heavy box-shadows | Borders `rgba(5,5,5,0.08)` |
-| Accent colors everywhere | Colors ONLY on agent states |
+| Accent colors everywhere | Colors ONLY on entity states |
 | Inter font for numbers | DM Mono for ALL values |
 | Glassmorphism / blur | Opaque, clean surfaces |

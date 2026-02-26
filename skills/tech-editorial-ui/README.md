@@ -1,14 +1,14 @@
 # Tech-Editorial Landing Page Design System
 
-This skill aggregates all visual rules to create developer/engineer-oriented landing pages (Dev Tools, APIs, Tech SaaS) with a serious, typographic "Tech-Editorial" aesthetic.
+Ce skill rassemble l'ensemble des règles visuelles pour créer des landing pages orientées développeurs/ingénieurs (Dev Tools, API, SaaS techniques) avec une esthétique "Tech-Editorial" sérieuse et typographique.
 
-## Available Versions
+## Versions disponibles
 
-In this folder, you will find two versions of this skill:
+Dans ce dossier, vous trouverez deux versions de cette compétence (skill) :
 
-- 📁 **`en/`**: The **English** version. Designed to maximize the logical capabilities of the AI without constraints on the output language.
-- 📁 **`fr/`**: The **French** original version, fully documented and written in French. Ideal if the skill needs to be read and reviewed by French-speaking designers and developers.
+- 📁 **`fr/`** : La version originale, entièrement documentée et rédigée en **français**. Idéale si le skill doit être lu et revu par des designers et développeurs francophones.
+- 📁 **`en/`** : La version traduite en **anglais**. Conçue pour maximiser les capacités logiques de l'IA sans consigne hybride.
 
 ## Usage
 
-Point your agent framework to one of the `SKILL.md` files (the `en` version is recommended for perfect technical reliability).
+Pointez votre framework d'agent vers l'un des fichiers `SKILL.md` (la version `en` est recommandée pour une fiabilité technique parfaite). 

@@ -1,6 +1,6 @@
-# MAPF-FIS UI Design System
+# Scientific Instrument UI Design System
 
-This skill contains the instructions and design system for the **MAPF-FIS** (Multi-Agent Path Finding — Fault Injection Simulator) project. The target aesthetic is "Scientific Instrument".
+This skill contains the instructions and design system for creating **3D Simulation Dashboards**, WebGL interfaces, or dense data visualization projects. The target aesthetic is "Scientific Instrument".
 
 ## Available Versions
 

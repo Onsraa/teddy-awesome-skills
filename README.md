@@ -6,9 +6,9 @@ This professional repository contains a collection of advanced Skills (prompts a
 
 ## 📦 Available Skills
 
-1. **[MAPF-FIS UI Design System](./skills/mapf-fis-ui/)**
+1. **[Scientific Instrument UI Design System](./skills/scientific-instrument-ui/)**
    - An austere, sober, and confident "Scientific Instrument" style.
-   - Ideal for technical simulation dashboards, 3D WebGL interfaces (Bevy, Three.js), or data visualization.
+   - Ideal for technical simulation dashboards, 3D WebGL interfaces (Three.js), or data visualization.
    
 2. **[Tech-Editorial Landing Page Design System](./skills/tech-editorial-ui/)**
    - A "High-end Magazine" aesthetic combined with technical minimalism.
