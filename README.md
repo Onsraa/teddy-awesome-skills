@@ -2,7 +2,7 @@
 
 Welcome to the **Teddy Awesome Skills** repository!
 
-This professional repository contains a collection of advanced Skills (prompts and instructions) for your AI agents (Claude, GPT-4, Cursor, etc.). These skills provide precise, reusable design systems and logic for your Frontend development and web interface projects.
+This repository contains a collection of advanced Skills (prompts and instructions) for your AI agents (Claude, GPT-4, Cursor, etc.). These skills provide precise, reusable design systems and logic for your Frontend development and web interface projects.
 
 ## 📦 Available Skills
 
@@ -21,9 +21,9 @@ To accommodate both developers (readability) and artificial intelligence (execut
 ```bash
 skills/
 └── my-skill-name/
-    ├── en/         # �� 100% English version (optimized for AI generation)
+    ├── en/         # 100% English version (optimized for AI generation)
     │   └── SKILL.md
-    └── fr/         # �� 100% French version (ideal for human documentation)
+    └── fr/         # 100% French version (ideal for human documentation)
         └── SKILL.md
 ```
 
@@ -31,11 +31,6 @@ skills/
 Large Language Models naturally perform better (both in reasoning and coding) when given instructions in their native training language: English. The _English_ version is therefore ideal for setting up the core behavior of your agent. 
 
 👉 [Read our documentation on the English vs. Localized Languages strategy](./docs/language-strategy.md)
-
-## 🛠️ How to use a Skill?
-
-- Copy the content of the `SKILL.md` file from your preferred language folder into your "Custom Instructions" / "System Prompt" on Claude, ChatGPT, Cursor, or GitHub Copilot.
-- Or, if you use an agent with persistent local context (like *Claude Code*), simply point it to the relevant file path (e.g., `Use the skill from skills/tech-editorial-ui/en/SKILL.md to redesign my index.html page`).
 
 ---
 _Created to standardize, accelerate, and elevate AI-assisted Frontend development._
