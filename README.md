@@ -27,10 +27,10 @@ skills/
         └── SKILL.md
 ```
 
-**Why two versions?**
+**Why multiple versions?**
 Large Language Models naturally perform better (both in reasoning and coding) when given instructions in their native training language: English. The _English_ version is therefore ideal for setting up the core behavior of your agent. 
 
-👉 [Read our documentation on the English vs French approach](./docs/en-vs-fr.md)
+👉 [Read our documentation on the English vs. Localized Languages strategy](./docs/language-strategy.md)
 
 ## 🛠️ How to use a Skill?
 
