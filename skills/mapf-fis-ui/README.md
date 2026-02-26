@@ -1,14 +1,14 @@
 # MAPF-FIS UI Design System
 
-Ce skill contient les instructions et le système de design pour le projet **MAPF-FIS** (Multi-Agent Path Finding — Fault Injection Simulator). L'esthétique visée est "Instrument Scientifique" (Scientific Instrument).
+This skill contains the instructions and design system for the **MAPF-FIS** (Multi-Agent Path Finding — Fault Injection Simulator) project. The target aesthetic is "Scientific Instrument".
 
-## Versions disponibles
+## Available Versions
 
-Dans ce dossier, vous trouverez deux versions de cette compétence (skill) :
+In this folder, you will find two versions of this skill:
 
-- 📁 **`fr/`** : La version originale, entièrement documentée et rédigée en **français**. Idéale si vous souhaitez lire, comprendre et maintenir le système de design avec une équipe francophone.
-- 📁 **`en/`** : La version traduite en **anglais**. Définie pour maximiser les performances d'exécution des LLMs (qui sont principalement entraînés sur des ressources anglophones), tout en étant décorrélée des instructions spécifiques pour la langue de sortie.
+- 📁 **`en/`**: The **English** version. Designed to maximize the logical execution capabilities of LLMs (which are primarily trained on English resources), without specific instructions regarding the output language.
+- 📁 **`fr/`**: The **French** version. Ideal if you want to read, understand, and maintain the design system with a French-speaking team.
 
-## Comment l'utiliser avec l'Agent ?
+## How to use it with your Agent?
 
-Pointez votre agent d'IA vers l'un des fichiers `SKILL.md` contenu dans le sous-dossier de votre choix.
+Point your AI agent to one of the `SKILL.md` files located in the subfolder of your choice.

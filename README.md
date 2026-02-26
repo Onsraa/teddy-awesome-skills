@@ -1,41 +1,41 @@
 # Teddy Awesome Skills 🚀
 
-Bienvenue sur le dépôt **Teddy Awesome Skills** !
+Welcome to the **Teddy Awesome Skills** repository!
 
-Ce repository professionnel regroupe une collection de compétences (Skills) avancées pour vos agents IA (Claude, GPT-4, Cursor, etc.). Ces skills incarnent des systèmes de design précis et ré-exploitables pour vos projets de développement Frontend et interfaces Web.
+This professional repository contains a collection of advanced Skills (prompts and instructions) for your AI agents (Claude, GPT-4, Cursor, etc.). These skills provide precise, reusable design systems and logic for your Frontend development and web interface projects.
 
-## 📦 Les Skills disponibles
+## 📦 Available Skills
 
 1. **[MAPF-FIS UI Design System](./skills/mapf-fis-ui/)**
-   - Un style austère, sobre et confiant type "Instrument Scientifique".
-   - Idéal pour les tableaux de bord techniques de simulation, les interfaces 3D WebGL (Bevy, Three.js) ou la dataviz.
+   - An austere, sober, and confident "Scientific Instrument" style.
+   - Ideal for technical simulation dashboards, 3D WebGL interfaces (Bevy, Three.js), or data visualization.
    
 2. **[Tech-Editorial Landing Page Design System](./skills/tech-editorial-ui/)**
-   - Une esthétique "Magazine haut de gamme" mariée au minimalisme technique.
-   - Idéal pour les landing pages de Dev Tools, startups tech, APIs et solutions SaaS.
+   - A "High-end Magazine" aesthetic combined with technical minimalism.
+   - Ideal for Dev Tools landing pages, tech startups, APIs, and SaaS solutions.
 
-## 🏗️ Architecture du projet
+## 🏗️ Project Architecture
 
-Afin de pouvoir s'adapter aussi bien au développeur (lisibilité) qu'aux l'intelligences artificielles (performance d'exécution), chaque skill est décliné en deux versions :
+To accommodate both developers (readability) and artificial intelligence (execution performance), each skill is available in two versions:
 
 ```bash
 skills/
-└── mon-skill-nom/
-    ├── fr/         # 🇫🇷 Version 100% en français (idéale pour la documentation humaine)
+└── my-skill-name/
+    ├── en/         # �� 100% English version (optimized for AI generation)
     │   └── SKILL.md
-    └── en/         # 🇬🇧 Version 100% en anglais (optimisée pour la génération IA)
+    └── fr/         # �� 100% French version (ideal for human documentation)
         └── SKILL.md
 ```
 
-**Pourquoi deux versions ?**
-Les modèles de langages sont naturellement plus performants (raisonnement et programmation) lorsqu'on leur donne des consignes dans leur langue maternelle d'entraînement : l'Anglais. La version _Anglaise_ est donc idéale pour paramétrer le comportement profond de l'agent.
+**Why two versions?**
+Large Language Models naturally perform better (both in reasoning and coding) when given instructions in their native training language: English. The _English_ version is therefore ideal for setting up the core behavior of your agent. 
 
-👉 [Lisez notre documentation sur l'approche Française vs Anglaise](./docs/fr-vs-en.md)
+👉 [Read our documentation on the English vs French approach](./docs/en-vs-fr.md)
 
-## 🛠️ Comment utiliser un Skill ?
+## 🛠️ How to use a Skill?
 
-- Copiez le contenu du fichier `SKILL.md` de la langue de votre choix dans vos propres "Custom Instructions" / "System Prompt" sur Claude, ChatGPT, Cursor, GitHub Copilot.
-- Ou si vous utilisez un agent avec un contexte persistant local (comme *Claude Code*), pointez-le simplement vers le chemin du fichier concerné (ex: `Utilise le skill stocké dans skills/tech-editorial-ui/en/SKILL.md pour redessiner ma page index.html`).
+- Copy the content of the `SKILL.md` file from your preferred language folder into your "Custom Instructions" / "System Prompt" on Claude, ChatGPT, Cursor, or GitHub Copilot.
+- Or, if you use an agent with persistent local context (like *Claude Code*), simply point it to the relevant file path (e.g., `Use the skill from skills/tech-editorial-ui/en/SKILL.md to redesign my index.html page`).
 
 ---
-_Créé pour standardiser, accélérer et sublimer le développement Frontend assisté par IA._
+_Created to standardize, accelerate, and elevate AI-assisted Frontend development._
